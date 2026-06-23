@@ -1,0 +1,25 @@
+// ==== Numbers ====
+ERR_KIND(MultipleDecimalPoints, "multiple decimal points")
+ERR_KIND(TrailingDecimalPoint, "trailing decimal points")
+ERR_KIND(LeadingZeroInInteger, "leading zero in integer")
+ERR_KIND(InvalidDigitSeparator, "invalid digit separator")
+ERR_KIND(InvalidNumericLiteral, "invalid numeric literal")
+ERR_KIND(MissingDigit, "missing digit")
+ERR_KIND(InvalidExponent, "invalid exponent")
+ERR_KIND(MultipleExponents, "multiple exponent")
+ERR_KIND(TrailingExponent, "trailing exponent")
+
+// ==== Chars ====
+ERR_KIND(EmptyCharLiteral, "empty char literal")
+ERR_KIND(UnterminatedCharLiteral, "unterminated char literal")
+ERR_KIND(InvalidCharLiteral, "invalid char literal")
+
+// ==== Strings ====
+ERR_KIND(UnterminatedStringLiteral, "unterminated string literal")
+ERR_KIND(UnrecognizedEscape, "unrecognized escape sequence")
+
+// ==== Block comments ====
+ERR_KIND(UnterminatedBlockComment, "unterminated block comment")
+
+// ==== Illegal characters ====
+ERR_KIND(IllegalCharacters, "illegal characters")

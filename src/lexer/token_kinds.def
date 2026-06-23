@@ -1,0 +1,114 @@
+// default definitions for X-Macros.
+// allows including this file while only defining a subset of token kinds.
+#ifndef TOK_KIND
+#define TOK_KIND(name)
+#endif
+
+#ifndef KEYWORD
+#define KEYWORD(name, str)
+#endif
+
+#ifndef OPERATOR
+#define OPERATOR(name, str)
+#endif
+
+#ifndef PUNCTUATOR
+#define PUNCTUATOR(name, str)
+#endif
+
+// ==== Punctuators ====
+PUNCTUATOR(LeftParen, "(")
+PUNCTUATOR(RightParen, ")")
+PUNCTUATOR(LeftBracket, "[")
+PUNCTUATOR(RightBracket, "]")
+PUNCTUATOR(LeftBrace, "{")
+PUNCTUATOR(RightBrace, "}")
+PUNCTUATOR(Comma, ",")
+PUNCTUATOR(Colon, ":")
+PUNCTUATOR(Semicolon, ";")
+
+// ==== Operators ====
+OPERATOR(Plus, "+")
+OPERATOR(Minus, "-")
+OPERATOR(Star, "*")
+OPERATOR(Slash, "/")
+OPERATOR(Percent, "%")
+
+OPERATOR(Equal, "=")
+
+OPERATOR(EqualEqual, "==")
+OPERATOR(BangEqual, "!=")
+OPERATOR(Less, "<")
+OPERATOR(LessEqual, "<=")
+OPERATOR(Greater, ">")
+OPERATOR(GreaterEqual, ">=")
+
+OPERATOR(Bang, "!")
+OPERATOR(AmpAmp, "&&")
+OPERATOR(PipePipe, "||")
+
+OPERATOR(Amp, "&")
+OPERATOR(Pipe, "|")
+OPERATOR(Caret, "^")
+OPERATOR(Tilde, "~")
+OPERATOR(LessLess, "<<")
+OPERATOR(GreaterGreater, ">>")
+
+OPERATOR(Dot, ".")
+OPERATOR(Arrow, "->")
+OPERATOR(FatArrow, "=>")
+
+// ==== Keywords ====
+KEYWORD(If, "if")
+KEYWORD(Else, "else")
+KEYWORD(Match, "match")
+KEYWORD(Case, "case")
+KEYWORD(For, "for")
+KEYWORD(While, "while")
+KEYWORD(Break, "break")
+KEYWORD(Continue, "continue")
+
+KEYWORD(Let, "let")
+KEYWORD(Var, "var")
+KEYWORD(Def, "def")
+KEYWORD(Struct, "struct")
+KEYWORD(Data, "data")
+KEYWORD(Impl, "impl")
+
+KEYWORD(Fn, "fn")
+KEYWORD(Return, "return")
+KEYWORD(Import, "import")
+KEYWORD(Export, "export")
+
+KEYWORD(Exception, "exception")
+
+KEYWORD(Move, "move")
+
+// ==== Bool Literals ====
+KEYWORD(True, "true")
+KEYWORD(False, "false")
+
+// ==== Identifiers ====
+TOK_KIND(Identifier)
+
+// ==== Numbers ====
+TOK_KIND(IntegerLiteral)
+TOK_KIND(FloatLiteral)
+TOK_KIND(BinaryLiteral)
+TOK_KIND(HexLiteral)
+TOK_KIND(OctalLiteral)
+
+// ==== Strings ====
+TOK_KIND(CharLiteral)
+TOK_KIND(StringLiteral)
+
+// ==== EOF ====
+TOK_KIND(EndOfFile)
+
+// ==== Errors ====
+TOK_KIND(Error)
+
+#undef TOK_KIND
+#undef KEYWORD
+#undef OPERATOR
+#undef PUNCTUATOR
